@@ -50,12 +50,20 @@ class TestContact < Test::Unit::TestCase
 
 	def test_display_all_contacts_specific_attribute
 		assert_equal ["Andrew","Bruce"], @db.display_attr("first name")
+		assert_equal ["Khajerian","Wayne"], @db.display_attr("last name")
+		assert_equal ["gmail","yahoo"], @db.display_attr("email")
+		assert_equal [1,2], @db.display_attr("id")
 	end
 
 	# test if I can delete contact and empty database 
 	# returns empty array
 	def test_delete_contact
-
+		@db.delete("Andrew")
+		# Test the Andrew Khajerian has been deleted by checking if 
+		# length of db_array is 1 instead of 2
+		assert_equal 1, @db.db_array.length
+		# Bruce should now be in the first index
+		assert_equal "Bruce", @db.db_array[0].first_name
 	end
 
 	def test_display_single_attr_of_all_contacts

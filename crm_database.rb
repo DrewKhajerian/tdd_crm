@@ -45,8 +45,20 @@ class Database
 		elsif attribute == "first name"
 			@db_array.each {|x| display<<x.first_name}
 			return display
+		elsif attribute == "last name"
+			@db_array.each {|x| display<<x.last_name}
+			return display
+		elsif attribute == "email"
+			@db_array.each {|x| display<<x.email}
+			return display
+		end
+	end
 
-
+	def delete(contact)
+		index = @db_array.index do |x| contact==x.id||contact==x.first_name||
+				contact==x.last_name||contact==x.email
+				end
+		
 		
 	end
 

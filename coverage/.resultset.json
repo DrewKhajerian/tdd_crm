@@ -41,6 +41,26 @@
         null,
         null,
         null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         null
       ],
       "/Users/andrew/Desktop/BitmakerLabs/Assignments/tdd_crm/crm_contact.rb": [
@@ -67,6 +87,6 @@
         null
       ]
     },
-    "timestamp": 1370971834
+    "timestamp": 1370972914
   }
 }
