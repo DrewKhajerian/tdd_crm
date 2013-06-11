@@ -57,9 +57,8 @@ class Database
 	def delete(contact)
 		index = @db_array.index do |x| contact==x.id||contact==x.first_name||
 				contact==x.last_name||contact==x.email
-				end
-		
-		
+			end
+		@db_array.delete_at(index)
 	end
 
 

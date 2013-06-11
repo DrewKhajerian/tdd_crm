@@ -48,7 +48,7 @@ class TestContact < Test::Unit::TestCase
 		assert_equal 2, total_contacts
 	end
 
-	def test_display_all_contacts_specific_attribute
+	def test_display_single_attr_of_all_contacts
 		assert_equal ["Andrew","Bruce"], @db.display_attr("first name")
 		assert_equal ["Khajerian","Wayne"], @db.display_attr("last name")
 		assert_equal ["gmail","yahoo"], @db.display_attr("email")
@@ -64,23 +64,9 @@ class TestContact < Test::Unit::TestCase
 		assert_equal 1, @db.db_array.length
 		# Bruce should now be in the first index
 		assert_equal "Bruce", @db.db_array[0].first_name
+		@db.delete("Wayne")
+		# check if array is empty after deleting Bruce
+		assert_equal [], @db.db_array
 	end
-
-	def test_display_single_attr_of_all_contacts
-		
-	end
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 end
